@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Creepster&display=swap');
+    body {
+      background-image: linear-gradient(to bottom, #ff0000, #89CFF0);
+    }
+    h1, h2, #tries-left, #word, #attempts, .letter, #retry-btn {
+      font-family: 'Creepster', cursive;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="login-page">
+      <h2>Please enter your name</h2>
+      <input type="text" id="username" />
+      <button id="start-game">Start Game</button>
+    </div>
+    <div id="game-page" style="display: none;">
+      <h1 id="game-title"></h1>
+      <div id="tries-left">Tries left: 6</div>
+      <div id="hangman-container">
+        <svg id="hangman" viewBox="0 0 200 200" width="200" height="200">
+          <g id="hangman-gallows" stroke="black" stroke-width="5">
+            <line x1="50" y1="170" x2="150" y2="170" />
+            <line x1="100" y1="170" x2="100" y2="30" />
+            <line x1="100" y1="30" x2="60" y2="30" />
+            <line x1="60" y1="30" x2="60" y2="40" />
+          </g>
+          <g id="hangman-head" stroke="black" stroke-width="3" fill="none">
+            <circle cx="60" cy="50" r="10" visibility="hidden" />
+          </g>
+          <g id="hangman-body" stroke="black" stroke-width="3" fill="none">
+            <line x1="60" y1="60" x2="60" y2="100" visibility="hidden" />
+          </g>
+          <g id="hangman-arms" stroke="black" stroke-width="3" fill="none">
+            <line x1="60" y1="70" x2="50" y2="80" visibility="hidden" />
+            <line x1="60" y1="70" x2="70" y2="80" visibility="hidden" />
+          </g>
+          <g id="hangman-legs" stroke="black" stroke-width="3" fill="none">
+            <line x1="60" y1="100" x2="50" y2="120" visibility="hidden" />
+            <line x1="60" y1="100" x2="70" y2="120" visibility="hidden" />
+          </g>
+        </svg>
+        <div id="word"></div>
+        <div id="attempts"></div>
+        <div id="available-letters"></div>
+        <button id="retry-btn" style="display: none;">Retry</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3

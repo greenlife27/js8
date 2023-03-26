@@ -1,0 +1,104 @@
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    font-family: 'Creepster', cursive;
+    text-align: center;
+    background-color: #89CFF0;
+    background-image: radial-gradient(circle at center, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0) 70%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hangman-shape {
+    font-size: 3rem;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+  
+  #tries-left {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.1rem;
+  }
+  
+  #hangman-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #word {
+    font-size: 1.5rem;
+    letter-spacing: 1.5em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+  }
+  
+  #attempts {
+    font-size: 1rem;
+    margin-bottom: 1em;
+  }
+  
+  #available-letters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .letter {
+    display: inline-block;
+    background-color: #4a4a4a;
+    color: white;
+    padding: 0.5em;
+    margin: 0.25em;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+  }
+  
+  #retry-btn {
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    margin-top: 1em;
+  }
+  
+  #login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  #username {
+    padding: 0.5em;
+    font-size: 1rem;
+    margin-bottom: 1em;
+  }
+  
+  #start-game {
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+  }
+  
